@@ -1,0 +1,46 @@
+# --- Web framework ---
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.12        # file uploads
+ 
+# --- Database ---
+sqlalchemy==2.0.36              # async ORM
+asyncpg==0.30.0                 # async PostgreSQL driver
+psycopg2-binary==2.9.10         # sync driver for scripts/init_db.py
+ 
+# --- Auth & Security ---
+python-jose[cryptography]==3.3.0  # JWT tokens
+passlib[bcrypt]==1.7.4            # bcrypt password hashing
+bcrypt==4.2.0
+ 
+# --- ML Inference ---
+onnxruntime==1.20.1             # CPU inference (no GPU needed in prod)
+numpy==1.26.4
+opencv-python-headless==4.10.0.84  # headless: no GUI dependencies in Docker
+ 
+# --- Image processing ---
+Pillow==11.0.0
+scikit-image==0.24.0            # fractal box-counting, morphology
+ 
+# --- SAHI tiling ---
+sahi==0.11.19
+ 
+# --- Validation & config ---
+pydantic==2.10.2
+pydantic-settings==2.6.1        # BaseSettings for .env loading
+ 
+# --- HTTP client (for SAHI and internal requests) ---
+httpx==0.28.0
+ 
+# --- Logging ---
+loguru==0.7.2
+ 
+# --- Testing ---
+pytest==8.3.3
+pytest-asyncio==0.24.0
+httpx==0.28.0                   # async test client for FastAPI
+pytest-cov==6.0.0               # coverage reports
+ 
+# --- Dev utilities ---
+python-dotenv==1.0.1
+ 
